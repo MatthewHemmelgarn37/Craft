@@ -2041,17 +2041,11 @@ void parse_command(const char *buffer, int forward) {
             add_message("Viewing distance must be between 1 and 24.");
         }
     }
-    else if (sscanf(buffer, "/resJump") == 0) {
-        jumpHeight = 8;
-    }
     else if (sscanf(buffer, "/setJump %d", &amount) == 1) {
         jumpHeight = amount;
     }
     else if (sscanf(buffer, "/setSpeed %d", &amount) == 1) {
         spee = amount;
-    }
-    else if (sscanf(buffer, "/resSpeed") == 0) {
-        spee = 5;
     }
     else if (forward) {
         client_talk(buffer);
