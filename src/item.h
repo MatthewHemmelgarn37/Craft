@@ -2,7 +2,7 @@
 #define _item_h_
 
 #define EMPTY 0
-#define GRASS 1
+#define GRASS 5
 #define SAND 2
 #define STONE 3
 #define BRICK 4
