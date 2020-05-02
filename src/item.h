@@ -32,7 +32,7 @@
 #define COLOR_04 36
 #define COLOR_05 37
 #define COLOR_06 38
-#define COLOR_07 39
+#define COLOR_07 53
 #define COLOR_08 40
 #define COLOR_09 41
 #define COLOR_10 42
