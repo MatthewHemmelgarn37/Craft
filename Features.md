@@ -18,3 +18,6 @@
 ### User Story F: As a user, I want to be able to change the settings to display alternative textures on common blocks. 
 #### Task 1: Update the settings and create altered texture files such that they can be toggled on or off.
 ### User story G: As a user, I want to be able to change the light setting so when you press the up key it gets lighter and when you press the down key it gets darker.
+## Feature 3: Realism improvements
+#### User Story H: As a user, I want to be able to move through leaves, as they should not impede the character. 
+#### Task 1: Update the code to permit movement through leaves.
