@@ -164,6 +164,7 @@ int is_obstacle(int w) {
     switch (w) {
         case EMPTY:
         case CLOUD:
+        case LEAVES:
             return 0;
         default:
             return 1;
