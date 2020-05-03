@@ -2851,6 +2851,16 @@ int main(int argc, char **argv) {
                 render_text(&text_attrib, ALIGN_LEFT, tx, ty, ts, text_buffer);
                 ty -= ts * 2;
             }
+            if(jumpCheck == true) {
+                snprintf(text_buffer, 1024, "jumpGame: On");
+                render_text(&text_attrib, ALIGN_LEFT, tx, ty, ts, text_buffer);
+                ty -= ts * 2;
+            }
+            if(speedCheck == true) {
+                snprintf(text_buffer, 1024, "speedGame: On");
+                render_text(&text_attrib, ALIGN_LEFT, tx, ty, ts, text_buffer);
+                ty -= ts * 2;
+            }
 
             // RENDER PICTURE IN PICTURE //
             if (g->observe2) {
