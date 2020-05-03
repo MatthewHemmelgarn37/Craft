@@ -2846,7 +2846,11 @@ int main(int argc, char **argv) {
                         other->name);
                 }
             }
-            
+            if(jumpCheck == true || speedCheck == true) {
+                snprintf(text_buffer, 1024, "# of jumps: %d", jumpCount);
+                render_text(&text_attrib, ALIGN_LEFT, tx, ty, ts, text_buffer);
+                ty -= ts * 2;
+            }
 
             // RENDER PICTURE IN PICTURE //
             if (g->observe2) {
