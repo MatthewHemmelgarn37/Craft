@@ -43,9 +43,9 @@
 static int spee = 5;
 static int jumpHeight = 8;
 static int jumpCount = 0;
-static int jumpSpeedCount = 0;
 static bool jumpCheck = false;
 static bool speedCheck = false;
+static bool sprintCheck = false;
 
 typedef struct {
     Map map;
@@ -2040,6 +2040,7 @@ void parse_command(const char *buffer, int forward) {
                 jumpCheck = true;
             } else {
                 jumpCheck = false;
+                jumpCount = 0;
             }
         }
         else if(amount == 1) {
@@ -2047,6 +2048,7 @@ void parse_command(const char *buffer, int forward) {
                 speedCheck = true;
             } else {
                 speedCheck = false;
+                jumpCount = 0;
             }
         }
     }
@@ -2364,6 +2366,9 @@ void handle_movement(double dt) {
                 if(speedCheck == true) {
                     spee++;
                 }
+                if(jumpCheck == true || speedCheck == true) {
+                    jumpCount++;
+                }
                 dy = jumpHeight;
             }
         }
@@ -2375,6 +2380,7 @@ void handle_movement(double dt) {
        }
        else {
          if(glfwGetKey(g->window, CRAFT_KEY_FORWARD)) spee = spee * 4;
+         sprintCheck = true;
        }
     }
     float speed = g->flying ? spee : spee;
@@ -2404,6 +2410,10 @@ void handle_movement(double dt) {
     }
     if (s->y < 0) {
         s->y = highest_block(s->x, s->z) + 2;
+    }
+    if(sprintCheck == true) {
+        spee = spee / 4;
+        sprintCheck = false;
     }
 }
 
@@ -2836,6 +2846,7 @@ int main(int argc, char **argv) {
                         other->name);
                 }
             }
+            
 
             // RENDER PICTURE IN PICTURE //
             if (g->observe2) {
