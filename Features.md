@@ -14,7 +14,13 @@
 ### User Story F: As a user, I want to be able to play a modified version of jump game that also increases my speed.
 #### Task 1: Add a command to turn on and off the minigame
 #### Task 2: Change movement functionality so that when the minigame is on speed is increased incrementally everytime the player jumps
+### USer Story G: As a user, I want to be able to track how many times I have jumped during the miniGame.
+#### Task 1: Add a counter that tracks the number of jumps made while miniGame is on.
+#### Task 2: Display the counter on screen
 ## Feature 2: Graphical Enhancements
 ### User Story F: As a user, I want to be able to change the settings to display alternative textures on common blocks. 
 #### Task 1: Update the settings and create altered texture files such that they can be toggled on or off.
 ### User story G: As a user, I want to be able to change the light setting so when you press the up key it gets lighter and when you press the down key it gets darker.
+## Feature 3: Realism improvements
+#### User Story H: As a user, I want to be able to move through leaves, as they should not impede the character. 
+#### Task 1: Update the code to permit movement through leaves.
